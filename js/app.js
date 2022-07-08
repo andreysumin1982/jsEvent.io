@@ -1,4 +1,4 @@
-/* */
+//
 let buttons = document.querySelectorAll('.btn');
 //console.log(buttons)
 buttons.forEach(button => {
@@ -17,4 +17,30 @@ buttons.forEach(button => {
             }
         }
     })
-})
+});
+//
+function formatDate() {
+    //* Ф-ция возвр. дату
+    const date1 = new Date;
+    const d = date1.getDate().toString().padStart(2, "0");
+    const m = date1.getMonth() + 1;
+    const y = date1.getFullYear().toString();
+    return `${d}.${m.toString().padStart(2, "0")}.${y}`;
+};
+//
+function formatTime() {
+    //* Ф-ция возвр. время (hh:mm:ss)
+    const d = new Date
+    const hh = d.getHours().toString().padStart(2, "0");
+    const mm = d.getMinutes().toString().padStart(2, "0");
+    const ss = d.getSeconds().toString().padStart(2, "0");
+    return `${hh}:${mm}:${ss}`;
+};
+// Дата
+document.querySelector('.timerDate').innerHTML = formatDate();
+//
+setInterval(() => {
+    document.querySelector('.timer').innerHTML = `${formatTime()}`
+    //
+}, 1000);
+//
