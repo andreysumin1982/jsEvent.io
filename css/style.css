@@ -64,28 +64,15 @@ body{
     user-select: none;
     cursor: pointer;
     position: relative;
+    transition: .1s ease;
 }
 .btn:hover{
     background: #a1abe196;
     color: rgb(255, 255, 255);
-}
-.btn.active:hover{
-    background: #923e35;
-}
-
-.active{
-    background: #e43725;
-    color: rgb(228, 228, 228);
+    transition-duration: 0.2s;
 }
 .btn__timer{
-    font-size: 1.5vw;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    visibility: hidden;
-}
-.btn__timer.activeTimer{
-    visibility: visible;
+    display: none;
 }
 /*Модальное окно*/
 .modal{
@@ -104,19 +91,30 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: flex;
-    justify-content: center; */
-    /*--*/
+    /*-*/
     width: 60vw;
     height: 80vh;
     z-index: 99999;
     border: 1px solid silver;
     border-radius: 10px;
-    background-color: #daef87;
+    background-color: #B0C4DE;
     margin: 10vh auto;
     font-size: 2vw;
     text-align:center;
     color: rgb(42, 42, 42);
-   
+    animation-name: animate;
+    animation-duration: 0.5s; 
+}
+@keyframes animate {
+    from {top:-320px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+/*square*/
+.square{
+    width: 55vw;
+    height: 20vh;
+    margin: .1vw;
+    border: 1px solid rgb(118, 117, 117);
 }
 /*------------------*/

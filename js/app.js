@@ -9,6 +9,11 @@ buttons.forEach(button => {
         let modalContent = document.querySelector('.modal_content') //получаем контентную часть
         modalContent.innerHTML = `${button.parentNode.parentNode.childNodes[1].innerHTML}<br>
                                   ${button.innerHTML}`
+        for (let i = 0; i < 15; i++) {
+            const square = document.createElement('div')
+            square.classList.add('square')
+            modalContent.append(square)
+        }
         //
         window.onclick = function (event) { // клик, кроме контентного окна.
             //console.log(event) 
