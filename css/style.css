@@ -1,0 +1,122 @@
+/*-------для всех все сбрасываем-----------*/
+body, button, h1, h2, h3, h4, p, a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%; 
+    font-weight: normal;
+}
+/*--*/
+*{
+    box-sizing: border-box;
+}
+/*body*/
+body{
+    background: rgb(41, 41, 41);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(228, 228, 228);
+}
+/*title*/
+.title{
+    font-size: 3.5vw;
+    text-align: center;
+    padding: 1vw 0 3vw;
+    position: relative;
+}
+.title__timer{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.timerDate{
+    font-size: 2vw;
+    text-align: end;
+}
+/*containers*/
+.containers{
+    display: flex;
+    justify-content: space-around;
+}
+.container{
+    flex: 0 0 30%;
+}
+.container_title{
+    text-align: center;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+.container_body{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*btn*/
+.btn{
+    min-width: 120px;
+    min-height: 120px;
+    border: 3px solid silver;
+    color: #94b91a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 45%;
+    margin: .5vw;
+    font-size: 2vw;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.btn:hover{
+    background: #a1abe196;
+    color: rgb(255, 255, 255);
+}
+.btn.active:hover{
+    background: #923e35;
+}
+
+.active{
+    background: #e43725;
+    color: rgb(228, 228, 228);
+}
+.btn__timer{
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+.btn__timer.activeTimer{
+    visibility: visible;
+}
+/*Модальное окно*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.6);
+    overflow: auto;
+}
+/*Контентная часть окна*/
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: flex;
+    justify-content: center; */
+    /*--*/
+    width: 60vw;
+    height: 80vh;
+    z-index: 99999;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background-color: #daef87;
+    margin: 10vh auto;
+    font-size: 2vw;
+    text-align:center;
+    color: rgb(42, 42, 42);
+   
+}
+/*------------------*/
